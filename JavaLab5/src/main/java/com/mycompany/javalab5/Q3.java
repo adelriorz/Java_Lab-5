@@ -19,8 +19,7 @@ public class Q3{
         car3 = new Car("Nissan", "Sentra", 2019);
         carList = new ArrayList<>(Arrays.asList(car, car2,car3));
         
-        Collections.sort(carList, Comparator.comparing(Car::getYear));
-        Collections.reverse(carList);
+        Collections.sort(carList, Comparator.comparing(Car::getYear).reversed());
         for(Car car: carList){
             System.out.println("car = " + car.getYear());
         }
